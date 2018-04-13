@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>python django study</h1>
+    <h2><a href="{% url 'myDjango:toAdd' 0 %}">新文章</a></h2>
+
+    {% for article in articles %}'
+{#        <a href="{% url 'article_page'  article.id %}">{{ article.title }}</a> <br><br>#}
+        <a href="{% url 'myDjango:article_page'  article.id %}">{{ article.title }}</a> <br><br>
+    {% endfor %}
+
+</body>
+</html>
